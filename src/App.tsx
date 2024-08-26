@@ -1,8 +1,8 @@
 import './App.scss'
-import './assets/fonts/Satoshi Regular.otf'
-import './assets/fonts/Satoshi Bold.otf'
-import './assets/fonts/integralcf bold.otf'
 import Nav from './components/organisms/Nav/Nav'
+import Hero from './components/molecules/Hero/Hero'
+import Brands from './components/molecules/Brands/Brands'
+import Product from './components/molecules/Product/Product'
 
 function App() {
   
@@ -10,6 +10,9 @@ function App() {
   return (
     <>
       <Nav />
+      <Hero />
+      <Brands />
+      <Product />
     </>
   )
 }
