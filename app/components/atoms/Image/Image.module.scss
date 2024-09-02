@@ -1,0 +1,17 @@
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 14px;
+}
+  
+.image {
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+
+    }
+}

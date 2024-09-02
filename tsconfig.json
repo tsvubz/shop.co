@@ -30,7 +30,7 @@
       "@context/*": ["app/context/*"],
       "@data/*": ["app/data/*"],
       "@hooks/*": ["app/hooks/*"],
-      "@utils/*": ["app/utilities/*"],
+      "@utils/*": ["app/utils/*"],
       "@assets/*": ["app/assets/*"],
       "@styles/*": ["app/assets/styles/*"],
       "@fonts/*": ["app/assets/fonts/*"],

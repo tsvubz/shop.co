@@ -1,8 +1,8 @@
 export enum FlexGap {
-    XSMALL = 2,
-    SMALL = 4,
-    MEDIUM = 8,
-    LARGE = 16,
+    XSMALL = '1rem',
+    SMALL = '4rem',
+    MEDIUM = '8rem',
+    LARGE = '16rem',
 }
   
 export enum FlexDirection {

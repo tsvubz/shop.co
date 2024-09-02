@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import { FlexDirection, AlignItems, JustifyContent, FlexWrap, FlexGap } from '@utils/styles';
+import { FlexDirection, AlignItems, JustifyContent, FlexWrap, FlexGap } from '@app/utils/styles';
 
 
 interface FlexProps {

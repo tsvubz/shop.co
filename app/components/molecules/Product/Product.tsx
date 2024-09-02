@@ -1,3 +1,4 @@
+import Image from '@app/components/atoms/Image/Image';
 import './Product.scss'
 
 interface ProductProps {
@@ -10,9 +11,7 @@ interface ProductProps {
 const Product = ({ imgUrl, title, rating, price }: ProductProps) => {
     return (
         <div className='product--card'>
-            <div className='product--image-box'>
-                <img src={imgUrl} alt={title} className='product--image'/>
-            </div>
+            <Image src={imgUrl} alt={title} />
             <div className='product--title'>
                 <h4 className='title'>
                     {title}

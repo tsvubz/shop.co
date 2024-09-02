@@ -1,6 +1,7 @@
 import '@assets/styles/global.scss'
 import Nav from '@organisms/Nav/Nav'
-import NewProducts from '@organisms/NewProducts/NewProducts'
+import CartProduct from '@molecules/CartProduct/CartProduct'
+
 
 const App = () => {
   
@@ -8,7 +9,13 @@ const App = () => {
   return (
     <>
       <Nav />
-      <NewProducts />
+      <CartProduct 
+        imgUrl='/public/images/cart3.jpg' 
+        title='Gradient Graphic T-shirt'
+        size='Large'
+        color='White'
+        price='$145'
+      />
     </>
   )
 }
