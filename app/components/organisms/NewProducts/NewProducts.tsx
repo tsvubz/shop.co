@@ -1,10 +1,11 @@
+import Grid from '@app/components/atoms/Grid/Grid'
 import newProducts from '@data/newItems.json'
 import Product from '@molecules/Product/Product'
 
 
 const NewProducts = () => {
   return (
-    <div>
+    <Grid columnsDesktop="desktop-4" columnsTablet="tablet-3" columnsMobile="mobile-2">
       {newProducts.map((product) => (
         <Product 
           key={product.id} 
@@ -14,7 +15,7 @@ const NewProducts = () => {
           price={product.price} 
         />
       ))}
-    </div>
+    </Grid>
   )
 }
 
