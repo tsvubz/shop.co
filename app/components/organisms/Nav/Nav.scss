@@ -13,6 +13,11 @@ header{
     justify-content: space-between;
 }
 
+.head--main a{
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .head--title{
 
@@ -29,7 +34,10 @@ header{
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    
 }
+
+
 
 .head--search{
     display: flex;

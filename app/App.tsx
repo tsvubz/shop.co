@@ -1,21 +1,28 @@
 import '@assets/styles/global.scss'
-import Nav from '@organisms/Nav/Nav'
-import CartProduct from '@molecules/CartProduct/CartProduct'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Nav from './components/organisms/Nav/Nav'
+import { CartContextProvider } from './context/CartContextProvider'
+import { Shop } from './pages/Shop'
+import { Home } from './pages/Home'
+import { Cart } from './pages/Cart'
+
 
 
 const App = () => {
-  
+ 
 
   return (
     <>
-      <Nav />
-      <CartProduct 
-        imgUrl='/public/images/cart3.jpg' 
-        title='Gradient Graphic T-shirt'
-        size='Large'
-        color='White'
-        price='$145'
-      />
+      <CartContextProvider>
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/shop' element={<Shop />}/>
+            <Route path='/cart' element={<Cart />}/>
+          </Routes>
+        </Router>
+      </CartContextProvider>  
     </>
   )
 }

@@ -1,17 +1,21 @@
 import './Nav.scss'
+import { Link } from 'react-router-dom';
 import { FaCartShopping, FaMagnifyingGlass, FaRegCircleUser } from "react-icons/fa6";
 
 function Nav() {
   return (
     <header>
         <div className='head--main'>
-          <h2 className="head--title">SHOP.CO</h2>
+          <Link to='/'>
+            <h2 className="head--title">SHOP.CO</h2>
+          </Link>
+          
           <nav className='head--nav'>
             <ul className='nav--list'>
-              <li className='nav--item'>Shop</li>
-              <li className='nav--item'>On Sale</li>
-              <li className='nav--item'>New Arrivals</li>
-              <li className='nav--item'>Brands</li>
+              <Link to='/shop'>Shop</Link>
+              <Link to='/sale'>On Sale</Link>
+              <Link to='new'>New Arrivals</Link>
+              <Link to='/brands'>Brands</Link>
             </ul>
          </nav>
         </div>
@@ -24,7 +28,7 @@ function Nav() {
           <FaMagnifyingGlass className='search--icon'/>
         </div>
         <div className='head--icons'>
-          <FaCartShopping />
+          <Link to='/cart'><FaCartShopping /></Link>
           <FaRegCircleUser />
         </div>
     </header>
