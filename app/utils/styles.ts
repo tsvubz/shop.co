@@ -1,4 +1,5 @@
 export enum FlexGap {
+    ZERO = '0',
     XSMALL = '1rem',
     SMALL = '4rem',
     MEDIUM = '8rem',

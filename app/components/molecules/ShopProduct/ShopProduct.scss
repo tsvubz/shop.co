@@ -1,0 +1,31 @@
+.product--card{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 300px auto auto auto;
+}
+
+
+.product--image-box {
+    height: 300px;
+}
+.product--image{
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+ h4{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+ p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+}
+
+ h3{
+    font-size: 1.5rem;
+}
