@@ -25,6 +25,7 @@ export enum AlignItems {
     END = "flex-end",
     STRETCH = "stretch",
     BASELINE = "baseline",
+    NORMAL = "normal",
 }
 
 export enum JustifyContent {

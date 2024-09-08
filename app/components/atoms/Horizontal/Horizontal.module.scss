@@ -1,0 +1,43 @@
+.hr {
+    color: var(--color-disabled);
+    text-align: center;
+}
+
+.desktop-1 {
+    width: 90%;
+}
+.desktop-2 {
+    width: 75%;
+}
+.desktop-3 {
+    width: 65%;
+}
+
+  
+  /* Tablet hr */
+@media screen and (max-width: 992px) {
+    .tablet-1 {
+        width: 90%;
+    }
+    .tablet-2 {
+        width: 50%;
+    }
+    .tablet-3 {
+        width: 40%;
+    }
+    
+}
+  
+  /* Mobile hr */
+@media screen and (max-width: 768px) {
+    .mobile-1 {
+        width: 90%;
+    }
+    .mobile-2 {
+        width: 40%;
+    }
+    .mobile-3 {
+        width: 25%;
+    }
+    
+}
