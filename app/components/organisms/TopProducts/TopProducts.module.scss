@@ -1,3 +1,11 @@
 .h2{
     font-size: 3rem;
 }
+
+.btn {
+    font-size: 1rem;
+    padding: 0.5rem 4.5rem;
+    border: var(--border-style-primary);
+    border-radius: 1.5rem;
+    background-color: var(--color-primary-white);
+}

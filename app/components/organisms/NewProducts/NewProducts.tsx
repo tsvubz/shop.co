@@ -30,7 +30,7 @@ const NewProducts = () => {
         ))}
       </Grid>
       <Flex alignItems={AlignItems.CENTER} justifyContent={JustifyContent.CENTER}>
-        <Button label='View All' onClick={() => navigate('/shop')}/>
+        <Button label='Shop' onClick={() => navigate('/shop')} className={styles.btn}/>
       </Flex>
     </Container>
   )
