@@ -2,9 +2,9 @@ import '@assets/styles/global.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Nav from './components/organisms/Nav/Nav'
 import { CartContextProvider } from './context/CartContextProvider'
-import { Shop } from './pages/Shop'
-import { Home } from './pages/Home'
-import { Cart } from './pages/Cart'
+import { Shop } from './pages/Shop/Shop'
+import { Home } from './pages/Home/Home'
+import { Cart } from './pages/Cart/Cart'
 
 
 
