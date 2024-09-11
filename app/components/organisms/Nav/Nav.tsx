@@ -1,38 +1,40 @@
-import './Nav.scss'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaCartShopping, FaMagnifyingGlass, FaRegCircleUser } from "react-icons/fa6";
+import styles from './Nav.module.scss';
+import Flex from '@app/components/atoms/Flex/Flex';
+import { AlignItems, JustifyContent } from '@app/utils/styles';
 
-function Nav() {
+const Nav: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header>
-        <div className='head--main'>
-          <Link to='/'>
-            <h2 className="head--title">SHOP.CO</h2>
-          </Link>
-          
-          <nav className='head--nav'>
-            <ul className='nav--list'>
-              <Link to='/shop'>Shop</Link>
-              <Link to='/sale'>On Sale</Link>
-              <Link to='new'>New Arrivals</Link>
-              <Link to='/brands'>Brands</Link>
-            </ul>
-         </nav>
-        </div>
-        <div className='head--search'>
-          <input type="text" 
-                className='search'
-                
-                />
-          <label className='search--label' htmlFor="text">Search for products...</label>
-          <FaMagnifyingGlass className='search--icon'/>
-        </div>
-        <div className='head--icons'>
-          <Link to='/cart'><FaCartShopping /></Link>
-          <FaRegCircleUser />
-        </div>
-    </header>
-  )
-}
+    <header className={styles.header}>
+      <Flex alignItems={AlignItems.CENTER} justifyContent={JustifyContent.SPACE_BETWEEN}>
+        <Link to="/" className={styles.title}>
+          SHOP.CO
+        </Link>
 
-export default Nav
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav className={`${styles.nav} ${isOpen ? styles.active : ''}`}>
+          <Flex alignItems={AlignItems.CENTER} justifyContent={JustifyContent.SPACE_EVENLY}>
+            <Link to="/shop">Shop</Link>
+            <Link to="/sale">On Sale</Link>
+            <Link to="/new">New Arrivals</Link>
+            <Link to="/cart">Cart</Link>
+          </Flex>
+        </nav>
+      </Flex>
+    </header>
+  );
+};
+
+export default Nav;
