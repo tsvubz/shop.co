@@ -1,0 +1,42 @@
+// Brands.module.scss
+.brandsSection {
+    background-color: #000;
+    min-height: 6rem;
+    padding: 1rem;
+  
+    .brandsContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    .brandImage {
+      max-width: 100px;
+      margin: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .brandsContainer {
+      justify-content: center;
+    }
+  
+    .brandImage {
+      max-width: 80px;
+      margin: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brandsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .brandImage {
+      max-width: 60px;
+      margin: 0.5rem 0;
+    }
+  }
+  

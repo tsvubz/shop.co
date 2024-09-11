@@ -1,54 +1,44 @@
-import './Hero.scss'
+// Hero.tsx
 
-function Hero() {
+import styles from './Hero.module.scss';
+
+const Hero: React.FC = () => {
   return (
-    <section className='hero--section'>
-    <div className="hero--container">
-        <div>
-            <h1 className='hero--title'>
-                FIND CLOTHES<br /> THAT MATCHES<br /> YOUR STYLE
-            </h1>
-        </div>
-        <div className='hero--text-container'>
-            <p className='hero--text'>
-                Browse through our diverse range of meticulously crafted garments,
-                designed to bring out your individuality and cater to your sense of style.
-            </p>
-        </div>
-        <div>
-            <button className='hero--btn'>
-                Shop Now
-            </button>
-        </div>
-        <div className='hero--stats-container'>
-            <div className='hero--stats'>
-                <h3>
-                    200+
-                </h3>
-                <p>
-                    International Brands
+    <section className={styles.heroSection}>
+        <div className={styles.heroContainer}>
+            <div>
+                <h1 className={styles.heroTitle}>
+                    FIND CLOTHES<br /> THAT MATCHES<br /> YOUR STYLE
+                </h1>
+            </div>
+            <div className={styles.heroTextContainer}>
+                <p className={styles.heroText}>
+                    Browse through our diverse range of meticulously crafted garments,<br />
+                    designed to bring out your individuality and cater to your sense of style.
                 </p>
             </div>
-            <div className='hero--stats'>
-                <h3>
-                    2,000+
-                </h3>
-                <p>
-                    High-Quality products
-                </p>
+            <div>
+                <button className={styles.heroBtn}>
+                    Shop Now
+                </button>
             </div>
-            <div className='hero--stats'>
-                <h3>
-                    30,000+
-                </h3>
-                <p>
-                    Happy Customers
-                </p>
-            </div>            
+            <div className={styles.heroStatsContainer}>
+                <div className={styles.heroStats}>
+                    <h3>200+</h3>
+                    <p>International Brands</p>
+                </div>
+                <div className={styles.heroStats}>
+                    <h3>2,000+</h3>
+                    <p>High-Quality products</p>
+                </div>
+                <div className={styles.heroStats}>
+                    <h3>30,000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
         </div>
-    </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
