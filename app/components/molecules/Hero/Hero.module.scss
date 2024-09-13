@@ -5,6 +5,16 @@
     height: 94vh;
     padding: 2rem;
 
+    @media (max-width: 1024px) {
+      background-image: url('../../../assets/images/herosmall.png');
+      background-size: contain;
+      height: auto;
+      background-repeat: no-repeat;
+      background-position: center top;
+      padding-top: 72rem;
+      background-color: #F2F0F1;
+    }  
+
     @media (max-width: 768px) {
         background-image: url('../../../assets/images/herosmall.png');
         background-size: contain;

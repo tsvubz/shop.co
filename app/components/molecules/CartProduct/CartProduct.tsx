@@ -26,10 +26,10 @@ const CartProduct = ({ id, imgUrl, title, size, color, price }: ProductProps) =>
             <Image src={imgUrl} alt={title} className={styles.img}/>
             <Flex direction={FlexDirection.COLUMN} alignItems={AlignItems.START}  gap={FlexGap.ZERO}>
                 <Flex direction={FlexDirection.COLUMN} alignItems={AlignItems.START} gap={FlexGap.ZERO}>
-                    <h4>{title}</h4>
-                    <p>Size: {size}</p>
-                    <p>Color: {color}</p>
-                    <h3>${price}</h3>
+                    <h4 className={styles.h4}>{title}</h4>
+                    <p className={styles.p}>Size: {size}</p>
+                    <p className={styles.p}>Color: {color}</p>
+                    <h3 className={styles.h3}>${price}</h3>
                 </Flex>
                 <div className={styles.counter}>
                     <Button label='-' onClick={() => removeFromCart(id)} className={styles.btn}/>

@@ -14,7 +14,7 @@ const TopProducts = () => {
 const navigate = useNavigate()
 
   return (
-    <Container paddingDesktop='desktop-1' paddingTablet='tablet-1' paddingMobile='mobile-1' >
+    <Container>
       <Flex alignItems={AlignItems.CENTER} justifyContent={JustifyContent.CENTER}>
         <h2 className={styles.h2}>top selling</h2>
       </Flex>

@@ -1,23 +1,44 @@
 
 .img{
     width: 25%;
+
+    @media (max-width: 768px) {
+        width: 25%;
+    }
     
 }
 
 h4{
     margin-bottom: 0;
     font-size: 1.1rem;
+
+    @media (max-width: 768px) {
+        margin-top: 0.25rem;
+        margin-bottom: 0;
+        font-size: 0.65rem;
+    }
 }
 
 p {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 0.75rem;
+
+    @media (max-width: 768px) {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 0.3rem;
+    }
 }
 
 h3{
     margin-top: 0;
     font-size: 1.5rem;
+
+    @media (max-width: 768px) {
+        margin-top: 0rem;
+        font-size: 0.5rem;
+    }
 }
 
 .counter{
@@ -26,6 +47,8 @@ h3{
     border: var(--border-style-primary);
     border-radius: 1.5rem;
     background-color: var(--color-primary-white);
+
+    
 }
 
 .inp{
@@ -37,6 +60,11 @@ h3{
     background-color: var(--color-primary-white);
     text-align: center;
 
+    @media (max-width: 768px) {
+        font-size: 0.3rem;
+        padding: 0.1rem 0.3rem;
+    }
+
 }
 
 .btn {
@@ -46,4 +74,9 @@ h3{
     background-color: inherit;
     background-color: var(--color-primary-white);
     border-radius: 1.5rem;
+
+    @media (max-width: 768px) {
+        font-size: 0.3rem;
+        padding: 0.1rem 0.3rem;
+    }
 }

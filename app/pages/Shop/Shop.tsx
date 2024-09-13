@@ -6,7 +6,7 @@ import { products } from '@app/data/products';
 
 export const Shop = () => {
     return (
-        <Container paddingDesktop='desktop-1' paddingTablet='tablet-1' paddingMobile='mobile-1' >
+        <Container>
             <Grid columnsDesktop="desktop-4" columnsTablet="tablet-3" columnsMobile="mobile-2">
             {products.map((product) => (
                 <ShopProduct 
