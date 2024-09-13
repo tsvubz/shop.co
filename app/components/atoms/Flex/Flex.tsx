@@ -1,29 +1,30 @@
-import React, { CSSProperties } from 'react';
-import { FlexDirection, AlignItems, JustifyContent, FlexWrap, FlexGap } from '@app/utils/styles';
-
+import { FlexDirection, AlignItems, JustifyContent, FlexWrap, FlexGap } from '@utils/styles';
+import { ReactNode } from 'react';
 
 interface FlexProps {
   direction?: FlexDirection;
   alignItems?: AlignItems;
   justifyContent?: JustifyContent;
   gap?: FlexGap;
-  wrap?:FlexWrap;
-  padding?:string;
-  margin?:string;
-  children: React.ReactNode;
+  wrap?: FlexWrap;
+  padding?: string;
+  margin?: string;
+  children: ReactNode;
+  className?: string;
 }
 
 const Flex = ({
-  direction = FlexDirection.ROW,
-  alignItems = AlignItems.CENTER,
-  justifyContent = JustifyContent.START,
-  gap = FlexGap.SMALL,
-  wrap = FlexWrap.NO_WRAP,
-  padding = '0',
-  margin = '0',
+  direction,
+  alignItems,
+  justifyContent,
+  gap,
+  wrap,
+  padding,
+  margin,
+  className,
   children,
-}: FlexProps ) => {
-  const flexStyle: CSSProperties = {
+}: FlexProps) => {
+  const flexStyle = {
     display: 'flex',
     flexDirection: direction,
     alignItems,
@@ -34,7 +35,11 @@ const Flex = ({
     margin,
   };
 
-  return <div style={flexStyle}>{children}</div>;
+  return (
+    <div style={flexStyle} className={className}>
+      {children}
+    </div>
+  );
 };
 
 export default Flex;

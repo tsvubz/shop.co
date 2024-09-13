@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import Container from '@app/components/atoms/Container/Container'
 import styles from './Cart.module.scss'
 import Scroll from '@app/components/atoms/Scroll/Scroll'
-import { AlignItems, FlexDirection, FlexGap, JustifyContent } from '@app/utils/styles'
+import { AlignItems, FlexDirection, FlexGap } from '@app/utils/styles'
 
 
 export const Cart = () => {
@@ -34,8 +34,8 @@ export const Cart = () => {
     const navigate = useNavigate();
 
   return (
-    <Container paddingDesktop='desktop-1' paddingTablet='tablet-1' paddingMobile='mobile-1' >
-        <Flex>
+    <Container>
+        <Flex className={styles.cart} gap={FlexGap.SMALL}>
             <Scroll height='450px' overflow='auto'>
                 <Grid columnsDesktop="desktop-1" columnsTablet="tablet-1" columnsMobile="mobile-1">
                 {products.map((product) => {
@@ -50,21 +50,21 @@ export const Cart = () => {
                     })}
                 </Grid>
             </Scroll>
-            <Flex direction={FlexDirection.COLUMN} gap={FlexGap.ZERO}>
+            <Flex direction={FlexDirection.COLUMN} alignItems={AlignItems.CENTER} gap={FlexGap.ZERO} className={styles.summary}>
                 <h3>Order Summary</h3>
-                <Flex alignItems={AlignItems.BASELINE} justifyContent={JustifyContent.SPACE_EVENLY}>
+                <Flex alignItems={AlignItems.BASELINE} gap={FlexGap.SMALL}>
                     <h4>Subtotal:</h4>
                     <span>${subtotal}</span>
                 </Flex>
-                <Flex alignItems={AlignItems.BASELINE} justifyContent={JustifyContent.SPACE_EVENLY}>
+                <Flex alignItems={AlignItems.BASELINE} gap={FlexGap.SMALL}>
                     <h4>Discount:</h4>
                     <span>${discount}</span>
                 </Flex>
-                <Flex alignItems={AlignItems.BASELINE} justifyContent={JustifyContent.SPACE_EVENLY}>
+                <Flex alignItems={AlignItems.BASELINE} gap={FlexGap.SMALL}>
                     <h4>Delivery Fee:</h4>
                     <span>${deliveryFee}</span>
                 </Flex>
-                <Flex alignItems={AlignItems.BASELINE} justifyContent={JustifyContent.SPACE_EVENLY}>
+                <Flex alignItems={AlignItems.BASELINE} gap={FlexGap.SMALL}>
                     <h3>Total:</h3>
                     <span>${totalAmount}</span>
                 </Flex>

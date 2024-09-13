@@ -6,3 +6,28 @@
     color: var(--color-primary-white);
     background-color: var(--color-secondary-dark);
 }
+
+.cart {
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.summary{
+    @media (max-width: 1024px) {
+        margin-bottom: 4rem;
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 2rem;
+    }
+}
